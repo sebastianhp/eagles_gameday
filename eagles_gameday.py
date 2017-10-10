@@ -131,8 +131,8 @@ def makeReceiving(recaway, rechome):
 if __name__ == '__main__':
     #These will change from week to week. Right now they'd have to be entered by
     #hand, but it is possible to figure them out ahead of time and automate it.
-    gameurl = 'http://www.nfl.com/liveupdate/game-center/2017100811/2017100811_gtd.json'
-    gameid = '2017100811'
+    gameid = '2017100900'
+    gameurl = 'http://www.nfl.com/liveupdate/game-center/{0}/{0}_gtd.json'.format(gameid)
 
     response = urllib2.urlopen(gameurl)
     rawdata = json.loads(response.read())
